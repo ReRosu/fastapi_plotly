@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<head>
+
+</head>
+<body>
+    <form name="plot_params">
+        <input type="number" name="from_x" value="0">
+        <input type="number" name="to_x" value="100">
+        <input type="number" name="step" value="1">
+    </form>
+    <button name="get_plot" onclick="userAction()">Get plot</button>
+    <script async>        
+        const userAction = async () => {
+            var f_box = document.plot_params.from_x;
+            var f_v = f_box.value;
+            var t_box = document.plot_params.to_x;
+            var t_v = t_box.value;
+            var s_box = document.plot_params.step;
+            var s_v = s_box.value;
+            var url = 'http://127.0.0.1:8081/api/v1/plot?' + new URLSearchParams({
+                from_x: f_v,
+                to_x: t_v,
+                step: s_v
+            }).toString();
+            console.log(url)
+            document.getElementById("iframeplot").src = url;
+        }    
+    </script>    
+    <iframe src="" frameborder="0" id="iframeplot" height="500" width="500"></iframe>
+</body>

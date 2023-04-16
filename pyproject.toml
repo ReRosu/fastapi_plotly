@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "fastapi-plotly"
+version = "0.1.0"
+description = ""
+authors = ["ReRosu <recrea.tor@yandex.ru>"]
+readme = "README.md"
+packages = [{include = "fastapi_plotly"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = "^0.95.1"
+plotly = "^5.14.1"
+loguru = "^0.7.0"
+uvicorn = "^0.21.1"
+pandas = "^2.0.0"
+numpy = "^1.24.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
