@@ -11,9 +11,15 @@ apt autoremove
 sudo apt install python3.11
 ~~~
 
-### Установка poetry
+### Установка и конфигурация poetry
 ~~~
 curl -sSL https://install.python-poetry.org
+~~~
+или
+~~~
+python -m pip install poetry
+~~~
+~~~
 poetry config virtualenvs.in-project true
 poetry --version
 ~~~
